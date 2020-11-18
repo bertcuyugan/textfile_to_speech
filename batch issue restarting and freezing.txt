@@ -1,0 +1,34 @@
+Hi Team and Welcome to this Google Classroom.
+
+Classroom name SSG ERA.
+Subject Batch.
+
+In this training video, we will be looking at a batch issue where a batch queue keeps restarting or freezing.
+
+I have prepared a checklist of what we can check as part of our troubleshooting for this issue. Let's begin...
+
+
+what to check.
+
+1.	If the batch job gets aborted, the system will try to restart the batch; however, if it fails, the batch will appear "stopped" in 6 9 8 3 screen.
+
+2.	check the BATCH dot LOG file size in unix. Is the file over it's 2GB limit?
+
+3.	check the BATCH dot LOG pointers. Do this by running CHECK dot FILE dot POS in TCL.
+
+4.	check how many records inside the log file by running COUNT BATCH dot LOG in TCL. This will give you an indication how much record it needs to read.
+
+5.	Purging the BATCH dot LOG file. The purging normally done by the customer in 6 9 5 5 then option7. The customer can purge specific executables.
+
+6.	Check who last accessed executable 6 9 5 5  by running LIST E X dot USAGE 6 9 5 5 in TCL. This will give us a list of users who last accessed 6 9 5 5.
+
+7.	This issue can impact server load, so ensure the PID is closed properly - check in 63 10 to verify.
+
+ 
+how to fix it.
+
+The customer will need to purge the BATCH dot LOG file in 6 9 5 5. This will reduce the amount of records for the system to read, hence, addressing the issue of batch restarting and freezing. 
+  
+
+
+
